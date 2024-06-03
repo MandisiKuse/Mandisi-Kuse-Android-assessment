@@ -4,16 +4,35 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/container"
-        app:dividerPadding="0dp"
-        app:showDividers="beginning|middle|end"
-        app:divider="@drawable/ic_filter"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:clipChildren="false"
-        android:clipToPadding="false"
-        android:layout_height="wrap_content"
-        android:paddingHorizontal="@dimen/padding_normal"
-        android:orientation="vertical" />
+        android:layout_height="match_parent">
+
+        <com.glucode.about_you.about.views.ProfileView
+            android:id="@+id/profile_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/container"
+            app:dividerPadding="0dp"
+            app:showDividers="beginning|middle|end"
+            app:divider="@drawable/ic_filter"
+            android:layout_width="match_parent"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/padding_normal"
+            android:orientation="vertical"
+
+            app:layout_constraintTop_toBottomOf="@id/profile_view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.core.widget.NestedScrollView>

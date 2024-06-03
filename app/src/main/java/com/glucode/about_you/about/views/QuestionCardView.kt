@@ -8,6 +8,7 @@ import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
 import androidx.core.view.children
 import com.glucode.about_you.R
+import com.glucode.about_you.about.AboutFragment
 import com.glucode.about_you.databinding.ViewQuestionCardBinding
 
 class QuestionCardView @JvmOverloads constructor(
@@ -62,6 +63,5 @@ class QuestionCardView @JvmOverloads constructor(
     }
 
     private fun setSelection() {
-
     }
 }

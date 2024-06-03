@@ -30,7 +30,7 @@ class EngineersRecyclerViewAdapter(
                 onClick(engineer)
             }
             //TODO - set profile picture
-//            statusIcon.setDrawable(item.icon)
+            binding.profileImage.setImageURI(engineer.defaultImageName)
         }
     }
 }
